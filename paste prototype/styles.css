@@ -1,0 +1,93 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #D3D3D3;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+.main-box{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 600px;
+    height: 600px;
+}
+
+.box-rotate{
+    --rotate:0;
+    transform: rotate(var(--rotate));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+
+.main-box .box-content{
+    --bgcolor:unset;
+    width: 20%;
+    height: 100px;
+    background-color: var(--bgcolor);
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.main-box .box-content::before{
+    --rotatebeforce:0;
+    border-radius: 15% 0% 0% 100%;
+    content:'';
+    position: relative;
+    right: 50%;
+    transform: rotate(var(--rotatebeforce));
+    border-left: 20px solid transparent;
+    border-top: 100px solid red;
+    border-right:10px solid red;
+    border-bottom: 0px solid transparent;
+}
+
+.main-box .box-content::after{
+    --rotateafter:0;
+    content:'';
+    position: relative;
+    left: 50%;
+    border-radius: 0% 15% 100% 0%;
+    transform: rotate(var(--rotateafter));
+    border-right: 20px solid transparent;
+    border-top: 100px solid blue ;
+    border-left: 10px solid blue;
+    border-bottom: 0px solid transparent;
+}
+
+.main-box .c1::after{--rotateafter:10deg;}
+.main-box .c2::before{--rotatebeforce:-10deg;}
+.main-box .c1::before{--rotatebeforce:0deg;}
+
+
+.main-box .b1{--rotate:-75deg;}
+.main-box .b2{--rotate:-37deg;}
+.main-box .b3{--rotate:0deg;}
+.main-box .b4{--rotate:37deg;}
+.main-box .b5{--rotate:75deg;}
+
+.main-box .c1{--bgcolor:#b8377e;}
+.main-box .c2{--bgcolor:#ddaa44;}
+.main-box .c3{--bgcolor:#99b63b;}
+.main-box .c4{--bgcolor:#659cce;}
+.main-box .c5{--bgcolor:#416aa7;}

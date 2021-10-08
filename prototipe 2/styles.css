@@ -1,0 +1,1214 @@
+#main-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  @media only screen and (min-width: 761px){
+    .layout-align{
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 30px 0 30px 0;
+    }
+    #tesla-align{
+       width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  } 
+  @media only screen and (max-width: 760px){
+    .layout-align{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 25px 0 25px 0;
+    }
+    #tesla-align{
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: scale(0.75);
+    }
+  } 
+  /* Just for very small screen sizes */
+  @media only screen and (max-width: 355px){
+    .layout-align{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0 10px 0;
+      transform: scale(0.8);
+    }
+    #tesla-align{
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: scale(0.60);
+    }
+  } 
+  /* CSS for 1st Meter */ 
+  
+  #score-meter-1{
+    width: 600px;
+    height: 300px;
+    border-top-left-radius: 360px;
+    border-top-right-radius: 360px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #scorer-1-inner-div{
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    width: 60%;
+    height: 60%;
+    border-top-left-radius: 360px;
+    border-top-right-radius: 360px;
+    background-color: #ffffff;
+    z-index: 2;
+  }
+  #scorer-1-inner-div-2{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 360px;
+    border-top-right-radius: 360px;
+    background-color: #FFCA3D;
+    transform-origin: bottom center;
+    transform: rotate(-130deg);
+    z-index: 0;
+  }
+  #scorer-1-inner-div-3{
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 360px;
+    border-top-right-radius: 360px;
+    background-color: #0093D7;
+    transform-origin: bottom center;
+    transform: rotate(130deg);
+    z-index: 0
+  }
+  #scorer-1-inner-div-4{
+    position: absolute;
+    left: 0px;
+    top: -2px;
+    width: 0;
+    height: 0;
+    border-left: 240px solid transparent;
+    border-right:280px solid transparent;
+    border-bottom: 280px solid #A3CD3B;
+    transform: rotate(180deg);
+  }
+  .scorer-1-tick {
+    position: absolute;
+    top: 40%;
+    left: -250%;
+    width: 300%;
+    height: 5px;
+    background-color: #000000;
+    animation-name: ticker-mover-1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+  }
+  #scorer-1-inner-div-5{
+    position: absolute;
+    left: 45%;
+    top: 80%;
+    width: 10%;
+    height: 20%;
+    border-radius: 50%;
+    background-color: #000000;
+    z-index: 2;
+  }
+  @keyframes ticker-mover-1 {
+    0% {
+      transform-origin: right center;
+      transform: rotate(0deg);
+    }
+    33% {
+      transform-origin: right center;
+      transform: rotate(120deg);
+    }
+    66% {
+      transform-origin: right center;
+      transform: rotate(120deg);
+    }
+    100% {
+      transform-origin:right center;
+      transform: rotate(120deg);
+    }
+  }
+  
+  /* CSS for 2nd Meter */ 
+  
+  #score-meter-2{
+    width: 30px;
+    height: 15px;
+    border-top-left-radius: 360px;
+    border-top-right-radius: 360px;
+    border: 140px solid #FBE939;
+    border-bottom: 0;
+    position: relative;
+  }
+  .scorer-2-tick {
+    position: absolute;
+    bottom: 2px;
+    left: -105px;
+    width: 120px;
+    height: 3px;
+    background-color: #ffffff;
+    transform: rotate(-0deg);
+    animation-name: ticker-mover-2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+  @keyframes ticker-mover-2 {
+    0% {
+      transform-origin: right center;
+      transform: rotate(0deg);
+    }
+    33% {
+      transform-origin: right center;
+      transform: rotate(120deg);
+    }
+    66% {
+      transform-origin: right center;
+      transform: rotate(120deg);
+    }
+    100% {
+      transform-origin:right center;
+      transform: rotate(120deg);
+    }
+  }
+  
+  /* CSS for 3rd Meter */
+  #score-meter-3{
+    transform: scale(1.6);
+    margin: 100px;
+  }
+  #score-meter-3{
+    width: 280px;
+    height: 280px;
+    border-top-left-radius: 360px;
+    border-top-right-radius: 360px;
+    border-radius:50%;
+    border: 4px solid white;
+    position: relative;
+    background-color: #090909;
+    overflow: hidden !important;
+  }
+  #scorer-3-main-tick{
+    position: absolute;
+    bottom: 50%;
+    left: 0px;
+    width: 140px;
+    height: 3px;
+    background-color: #3eedf2;
+    transform-origin: right center;
+    transform-origin: right center;
+    z-index: 11;
+    transform: rotate(300deg);
+    animation-name: ticker-mover-8;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  #scorer-3-kwh-tick{
+    position: absolute;
+    bottom: 50%;
+    left: -2px;
+    width: 140px;
+    height: 3px;
+    background-color: #FA543F;
+    transform-origin: right center;
+    transform-origin: right center;
+    z-index: 11;
+    transform: rotate(180deg);
+    animation-name: kwh-ticker-mover-8;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  #scorer-3-fill-div{
+    z-index:11;
+    position: absolute;
+    width: 268px;
+    height: 135px;
+    background: transparent;
+    top: -3px;
+    left: 0px;
+    border: 8px solid #3DDAF5;
+    border-top-left-radius: 360px;
+    border-top-right-radius: 360px;
+    border-bottom: none;
+    transform-origin: bottom center;
+    transform: rotate(-30deg);
+    animation-name: fill-div-8;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  #scorer-3-fill-div-shadow-cover{
+    z-index:12;
+    position: absolute;
+    width: 265px;
+    height: 135px;
+    background: transparent;
+    top: -9px;
+    left: -4px;
+    border: 10px solid #000000;
+    border-top-left-radius: 360px;
+    border-top-right-radius: 360px;
+    border-bottom: none;
+    transform-origin: bottom center;
+    transform: rotate(-240deg);
+  }
+  #scorer-3-fill-danger-div{
+    z-index: 14;
+    position: absolute;
+    width: 268px;
+    height: 135px;
+    background: transparent;
+    left: -5px;
+    top: -3px;
+    border: 8px solid #FA543F;
+    border-top-left-radius: 360px;
+    border-top-right-radius: 360px;
+    border-bottom: none;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    transform-origin: bottom center;
+    transform: rotate(105deg);
+    animation-name: kwh-fill-div-8;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  #scorer-3-fill-danger-div-shadow-cover{
+    z-index:15; 
+    position: absolute;
+    width: 259px;
+    height: 135px;
+    background: transparent;
+    left: 0px;
+    top:-10px;
+    border: 10px solid #000000;
+    border-top-left-radius: 360px;
+    border-top-right-radius: 360px;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom: none;
+    transform-origin: bottom center;
+    transform: rotate(180deg);  
+    animation-name: kwh-shadow-div-8;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .scorer-tick-3{
+    position: absolute;
+    bottom: 50%;
+    left: 0px;
+    width: 125px;
+    height: 5px;
+    transform-origin: right center;
+    border-left:15px solid #696a6d;
+    z-index:10;
+  }
+  #scorer-3-tick-1{
+    transform: rotate(-60deg);
+    background-color: #494a4c;
+    opacity: 1;
+    height: 2px;
+    z-index: 16;
+  }
+  #scorer-3-tick-2{
+    transform: rotate(-40deg);
+  }
+  #scorer-3-tick-3{
+    transform: rotate(-20deg);
+  }
+  #scorer-3-tick-4{
+    transform: rotate(0deg);
+  }
+  #scorer-3-tick-5{
+    transform: rotate(20deg);
+   }
+  #scorer-3-tick-6{
+    transform: rotate(40deg);
+  }
+  #scorer-3-tick-7{
+    transform: rotate(60deg);
+  }
+  #scorer-3-tick-8{
+    transform: rotate(80deg);
+  }
+  .scorer-3-sub-tick{
+    position: absolute;
+    bottom: 50%;
+    left: 0px;
+    width: 130px;
+    height: 2px;
+    transform-origin: right center;
+    border-left:10px solid #494a4c;
+    z-index:10;
+  }
+  #scorer-3-sub-tick-1{
+    transform: rotate(-50deg);
+  }
+  #scorer-3-sub-tick-2{
+    transform: rotate(-30deg);
+  }
+  #scorer-3-sub-tick-3{
+    transform: rotate(-10deg);
+  }
+  #scorer-3-sub-tick-4{
+    transform: rotate(10deg);
+  }
+  #scorer-3-sub-tick-5{
+    transform: rotate(30deg);
+  }
+  #scorer-3-sub-tick-6{
+    transform: rotate(50deg);
+  }
+  #scorer-3-sub-tick-7{
+    transform: rotate(70deg);
+  }
+  #scorer-3-sub-tick-8{
+   transform: rotate(90deg);
+   background-color: #494a4c;
+   opacity: 0.3;
+  }
+  .scorer-3-reverse-tick{
+    position: absolute;
+    bottom: 50%;
+    left: 0px;
+    width: 125px;
+    height: 5px;
+    transform-origin: right center;
+    border-left:15px solid #696a6d;
+    z-index: 10;
+  }
+  .top-reverse-ticks{
+    animation-name: top-reverse-tick-z-index-8;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .bottom-reverse-ticks{
+    animation-name: bottom-reverse-tick-z-index-8;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  #scorer-3-reverse-tick-1{
+    transform: rotate(105deg);
+  }
+  #scorer-3-reverse-tick-2{
+    transform: rotate(120deg);
+  }
+  #scorer-3-reverse-tick-3{
+    transform: rotate(135deg);
+  }
+  #scorer-3-reverse-tick-4{
+    transform: rotate(150deg);
+  }
+  #scorer-3-reverse-tick-5{
+    transform: rotate(165deg);
+  }
+  #scorer-3-reverse-tick-6{
+    transform: rotate(180deg);
+  }
+  #scorer-3-reverse-tick-7{
+    transform: rotate(195deg);
+  }
+  #scorer-3-reverse-tick-8{
+    transform: rotate(210deg);
+  }
+  #scorer-3-reverse-tick-9{
+    transform: rotate(225deg);
+  }
+  #scorer-3-reverse-tick-10{
+    z-index: 16;
+    transform: rotate(240deg);
+    background-color: #494a4c;
+    opacity: 1;
+    height: 2px;
+  }
+  .scorer-3-text{
+    position: absolute;
+    bottom: -25px;
+    left: 10px;
+    color: #bdbebf; 
+    transform-origin: center;
+    transform: rotate(-90deg);
+  }
+  #scorer-3-number p{
+     position: absolute;
+    width: 30%;
+    padding: 5px;
+    font-size: 20px;
+    border: 2px solid #3eedf2;
+    bottom: 10%;
+    left: 33%;
+    color: #696a6d; 
+  }
+  @keyframes fill-div-8 {
+    0% {
+      transform-origin: bottom center;
+      transform: rotate(120deg);
+     
+    }
+    20% {
+      transform-origin: bottom center;
+      transform: rotate(170deg);
+    }
+    50% {
+      transform-origin: bottom center;
+      transform: rotate(200deg);
+    }
+    66%{
+      transform-origin: bottom center;
+      transform: rotate(220deg);
+    }
+    75% {
+      transform-origin: bottom center;
+      transform: rotate(205deg);
+    }
+    100% {
+      transform-origin: bottom center;
+      transform: rotate(190deg);
+    }
+  }
+  @keyframes ticker-mover-8 {
+    0% {
+      transform-origin: right center;
+      transform: rotate(-60deg);
+    }
+    20% {
+      transform-origin: right center;
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform-origin: right center;
+      transform: rotate(20deg);
+    }
+    66%{
+      transform-origin: right center;
+      transform: rotate(40deg);
+    }
+    75% {
+      transform-origin: right center;
+      transform: rotate(25deg);
+    }
+    100% {
+      transform-origin:right center;
+      transform: rotate(10deg);
+    }
+  }
+  @keyframes kwh-fill-div-8 {
+    0% {
+      transform-origin: bottom center;
+      transform: rotate(-180deg);
+    }
+    20% {
+      
+      transform-origin: bottom center;
+      transform: rotate(-255deg);
+      
+    }
+    50% {
+    
+      transform-origin: bottom center;
+      transform: rotate(-260deg);
+    }
+    66%{
+      transform-origin: bottom center;
+      transform: rotate(-260deg);
+    }
+   75% {
+      visibility: hidden;
+      transform-origin: bottom center;
+      transform: rotate(-180deg);    
+      border: 8px solid #FA543F;
+      border-top-left-radius: 360px;
+      border-top-right-radius: 360px;
+      border-bottom: none;
+      border-right-color: transparent;
+      border-top-color: transparent;
+    }
+     76% {
+      border: 8px solid #59d63e;
+      border-top-left-radius: 360px;
+      border-top-right-radius: 360px;
+      border-bottom: none;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      visibility: hidden;
+      transform-origin: bottom center;
+      transform: rotate(135deg);    
+    }
+    100% {
+      
+      border: 8px solid #59d63e;
+      border-top-left-radius: 360px;
+      border-top-right-radius: 360px;
+      border-bottom: none;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      visibility: visible;
+      transform-origin:bottom center;
+      transform: rotate(180deg);
+    }
+  }
+  @keyframes kwh-shadow-div-8 {
+    9%{
+      left: 0px;
+    }
+    10% {
+      border-top-color: transparent;
+      border-left-color: black;
+      transform-origin: bottom center;
+      transform: rotate(180deg);
+      left: 0px;
+    }
+    11% {
+      left: -1px;
+      border-top-color: black;
+      border-left-color: #FA543F;
+      transform-origin: bottom center;
+      transform: rotate(135deg);
+    }
+    70%{
+      border-top-color: black;
+      border-left-color: #FA543F;
+      transform-origin: bottom center;
+      transform: rotate(135deg);
+      left: -1px;
+      
+    }
+    71%{
+      left: 2px;
+      border-top-color: transparent;
+      border-left-color: black;
+      transform-origin: bottom center;
+      transform: rotate(180deg);
+    }
+    75%{
+      left: 2px;
+      transform-origin: bottom center;
+      transform: rotate(180deg);
+  
+    }
+     76%{
+       left: -3px;
+      transform-origin: bottom center;
+      transform: rotate(135deg);
+   
+    }
+    100% {
+      transform-origin: bottom center;
+      transform: rotate(135deg);
+      left:-3px;
+      
+    }
+  }
+  @keyframes kwh-ticker-mover-8 {
+    0% {
+      transform-origin: right center;
+      transform: rotate(180deg);
+    }
+    20% {
+      transform-origin: right center;
+      transform: rotate(105deg);
+    }
+    50% {
+      transform-origin: right center;
+      transform: rotate(100deg);
+    }
+    66%{
+      transform-origin: right center;
+      transform: rotate(100deg);
+    }
+    75% {
+      transform-origin: right center;
+      transform: rotate(180deg);
+      background-color: #FA543F;
+    }
+    76%{
+      background-color: #59d63e;
+    }
+    100% {
+      background-color: #59d63e;
+      transform-origin:right center;
+      transform: rotate(225deg);
+    }
+  }
+  @keyframes top-reverse-tick-z-index-8{
+    
+    0% {
+      z-index: 10;
+    }
+    11% {
+     z-index: 10;
+    }
+    70%{
+     z-index: 10;
+      
+    }
+    71%{
+     z-index: 18;
+    }
+    75%{
+      z-index: 18;
+    }
+     76%{
+     z-index: 18;
+   
+    }
+    100% {
+      z-index: 18;
+    }
+  }
+  @keyframes bottom-reverse-tick-z-index-8{
+    
+    0% {
+      z-index: 18;
+    }
+    11% {
+     z-index: 18;
+    }
+    70%{
+     z-index: 18;
+      
+    }
+    71%{
+     z-index: 18;
+    }
+    75%{
+      z-index: 18;
+    }
+     76%{
+     z-index: 18;
+   
+    }
+    100% {
+      z-index: 10;
+      
+    }
+  }
+  #inner-circle-3{
+    z-index: 25;
+    position: absolute !important;
+    width: 140px;
+    height: 140px;
+    top: 70px;
+    left: 70px;
+    border-top-left-radius: 360px;
+    border-top-right-radius: 360px;
+    border-radius:50%;
+    border: 4px solid #494a4c;
+    position: relative;
+    background-color: #000000;
+  }
+  #tesla-logo{
+    width: 80px;height:80px;
+    width: 70%;
+    padding-left: 15%;
+    height: 70%;
+    padding-top: 15%;
+    height: auto;
+    margin: 0;
+  }
+  #speed-kmph-8{
+    color:#fff;
+    width: 20%;
+    height: 10%;
+    font-size: 30px;
+  }
+  
+  /* CSS for 4th Meter */ 
+  #score-meter-4{
+    overflow: hidden;
+    transform: scale(0.5);
+  }
+  #scorer-4-outer-div {
+    overflow: hidden;
+    width: 350px;
+    height: 175px;
+    background-color: #fff;
+  }
+  #scorer-4-outer-background {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 30em 30em 0 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-top: 1px solid #923CF5;
+    border-left: 1px solid #923CF5;
+    border-right: 1px solid #923CF5;
+    border-bottom: 1px solid #923CF5;
+    
+  }
+  #scorer-4-inner-div {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    animation-name: color-fill-4;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+    border: none;
+   
+  }
+  #scorer-4-inner-background {
+    
+    width: 75%;
+    height: 75%;
+    background-color: #ffffff;
+    border-radius: 30em 30em 0 0;
+    border: 1px solid #923CF5;
+    border-bottom: none !important;
+    animation-name: reverse-rotation-4;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+    
+  }
+  .scorer-4-tick {
+    position: absolute;
+    bottom: -20px;
+    left: -0%;
+    width: 50%;
+    height: 5px;
+    background-color: #923CF5;
+    animation-name: ticker-mover-4;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+  @keyframes color-fill-4 {
+    0% {
+      background-color: #923CF5;
+      transform-origin: bottom center;
+      transform: rotate(180deg);
+    }
+    33% {
+      background-color: #923CF5;
+      transform-origin: bottom center;
+      transform: rotate(220deg);
+    }
+    66% {
+      background-color: #923CF5;
+      transform-origin: bottom center;
+      transform: rotate(260deg);
+    }
+    100% {
+      background-color: #923CF5;
+      transform-origin: bottom center;
+      transform: rotate(300deg);
+    }
+  }
+  @keyframes reverse-rotation-4 {
+    0% {
+      transform-origin: bottom center;
+      transform: rotate(-180deg);
+    }
+    33% {
+      transform-origin: bottom center;
+      transform: rotate(-220deg);
+    }
+    66% {
+      transform-origin: bottom center;
+      transform: rotate(-260deg);
+    }
+    100% {
+      transform-origin: bottom center;
+      transform: rotate(-300deg);
+    }
+  }
+  @keyframes ticker-mover-4 {
+    0% {
+      transform-origin: right center;
+      transform: rotate(0deg);
+    }
+    33% {
+      transform-origin: right center;
+      transform: rotate(40deg);
+    }
+    66% {
+      transform-origin: right center;
+      transform: rotate(80deg);
+    }
+    100% {
+      transform-origin:right center;
+      transform: rotate(120deg);
+    }
+  }
+  
+  /* CSS for 5th Meter */ 
+  #scorer-5-holder {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  #scorer-5-background {
+    width: 200px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 200px 200px 0 0;
+    overflow: hidden;
+    border: 10px solid #fdad2c;
+  }
+  #scorer-5-color-zone {
+    border-radius: 200px 200px 0 0;
+    margin: 0;
+    background: red;
+    width: 200px;
+    height: 100px;
+    transform-origin: 50% 100%;
+    animation-name: color-fill-5;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    position: relative;
+    animation-iteration-count: infinite;
+  }
+  .scorer-5-tick {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 4px;
+    transform-origin: top center;
+    transform: rotate(0deg);
+    background-color: #fdad2c;
+  }
+  @keyframes color-fill-5 {
+    0% {
+      background-color: green;
+      transform: rotate(180deg);
+    }
+    33% {
+      background-color: yellow;
+      transform: rotate(228deg);
+    }
+    66% {
+      background-color: orange;
+      transform: rotate(276deg);
+    }
+    100% {
+      background-color: #f35366;
+      transform: rotate(324deg);
+    }
+  }
+  
+  /* CSS for 6th Meter */ 
+  
+  #score-meter-6{
+    width: 280px;
+    height: 280px;
+    border-top-left-radius: 360px;
+    border-top-right-radius: 360px;
+    border-radius:50%;
+    border: 4px solid white;
+    position: relative;
+    background-color: #090909;
+  }
+  #scorer-6-main-tick{
+    position: absolute;
+    bottom: 50%;
+    left: 10px;
+    width: 130px;
+    height: 5px;
+    background-color: #3eedf2;
+    transform-origin: right center;
+    transform-origin: right center;
+    transform: rotate(17deg);
+    z-index: 3;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    animation-name: ticker-mover-6;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .scorer-6-ticks{
+     position: absolute;
+    bottom: 50%;
+    left: 0px;
+    width: 120px;
+    height: 2px;
+    background-color: #090909;
+    transform-origin: right center;
+    border-left:20px solid #3eedf2;
+  }
+  #scorer-6-tick-1{
+    transform: rotate(-30deg);
+  }
+  #scorer-6-tick-2{
+    transform: rotate(0deg);
+  }
+  #scorer-6-tick-3{
+    transform: rotate(30deg);
+  }
+  #scorer-6-tick-4{
+    transform: rotate(60deg);
+  }
+  #scorer-6-tick-5{
+    transform: rotate(90deg);
+  }
+  #scorer-6-tick-6{
+    transform: rotate(120deg);
+  }
+  #scorer-6-tick-7{
+    transform: rotate(150deg);
+  }
+  #scorer-6-tick-8{
+    transform: rotate(180deg);
+  }
+  #scorer-6-tick-9{
+    transform: rotate(210deg);
+  }
+  .scorer-6-sub-ticks{
+     position: absolute;
+    bottom: 50%;
+    left: 0px;
+    width: 130px;
+    height: 2px;
+    transform-origin: right center; 
+    border-left:10px solid #3eedf2;
+    background-color: #090909;
+  }
+  #scorer-6-sub-tick-1{
+    transform: rotate(-20deg);
+  }
+  #scorer-6-sub-tick-2{
+    transform: rotate(-10deg);
+  }
+  #scorer-6-sub-tick-3{
+    transform: rotate(10deg);
+  }
+  #scorer-6-sub-tick-4{
+    transform: rotate(20deg);
+  }
+  #scorer-6-sub-tick-5{
+    transform: rotate(40deg);
+  }
+  #scorer-6-sub-tick-6{
+    transform: rotate(50deg);
+  }
+  #scorer-6-sub-tick-7{
+    transform: rotate(70deg);
+  }
+  #scorer-6-sub-tick-8{
+    transform: rotate(80deg);
+  }
+  #scorer-6-sub-tick-9{
+    transform: rotate(100deg);
+  }
+  #scorer-6-sub-tick-10{
+    transform: rotate(110deg);
+  }
+  #scorer-6-sub-tick-11{
+    transform: rotate(130deg);
+  }
+  #scorer-6-sub-tick-12{
+    transform: rotate(140deg);
+  }
+  #scorer-6-sub-tick-13{
+    transform: rotate(160deg);
+  }
+  #scorer-6-sub-tick-14{
+    transform: rotate(170deg);
+  }
+  #scorer-6-sub-tick-15{
+    transform: rotate(190deg);
+  }
+  #scorer-6-sub-tick-16{
+    transform: rotate(200deg);
+  }
+  .scorer-6-text{
+     position: absolute;
+    bottom: -25px;
+    left: 10px;
+    color: #3eedf2; 
+    transform-origin: center;
+    transform: rotate(-90deg);
+  }
+  #scorer-6-number p{
+    text-align:center;
+     position: absolute;
+    width: 30%;
+    padding: 5px;
+    font-size: 28px;
+    bottom: 10%;
+    left: 33%;
+    color: white; 
+  }
+  #scorer-6-fill-div{
+    z-index:2;
+    position: absolute;
+    width: 270px;
+    height: 135px;
+    background: transparent;
+    left: 0px;
+    top:0px;
+    border: 5px solid #3eedf2;
+    border-top-left-radius: 360px;
+    border-top-right-radius: 360px;
+    border-bottom: none;
+    transform-origin: bottom center;
+    transform: rotate(-30deg);
+  }
+  #scorer-6-fill-danger-div{
+    z-index:0;
+    position: absolute;
+    width: 270px;
+    height: 135px;
+    background: transparent;
+    left: 0px;
+    top:0px;
+    border: 5px solid red;
+    border-top-left-radius: 360px;
+    border-top-right-radius: 360px;
+    border-bottom: none;
+    transform-origin: bottom center;
+    transform: rotate(30deg);
+  }
+  @keyframes ticker-mover-6 {
+    0% {
+      transform-origin: right center;
+      transform: rotate(-30deg);
+    }
+    20% {
+      transform-origin: right center;
+      transform: rotate(60deg);
+    }
+    50% {
+      transform-origin: right center;
+      transform: rotate(110deg);
+    }
+    75% {
+      transform-origin: right center;
+      transform: rotate(150deg);
+    }
+    100% {
+      transform-origin:right center;
+      transform: rotate(170deg);
+    }
+  }
+  
+  
+  /* CSS for  7th Meter */
+  
+  #scorer-7-holder {
+    width: 200px;
+    position: relative;
+  }
+  
+  #scorer-7-background {
+    width: 200px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 200px 200px 0 0;
+    overflow: hidden;
+    border: 2px solid #FDAE3D;;   
+  }
+  
+  #scorer-7-color-zone {
+    border-radius: 200px 200px 0 0;
+    margin: 0;
+    background: red;
+    width: 200px;
+    height: 100px;
+    transform-origin: 50% 100%;
+    animation-name: color-fill-7;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .scorer-7-tick {
+    position: absolute;
+    bottom: 2px;
+    left: 20px;
+    width: 80px;
+    height: 4px;
+    background-color: black;
+    border-top-left-radius: 160px;
+    transform: rotate(-0deg);
+    animation-name: ticker-mover-7;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes color-fill-7 {
+    0% {
+      background-color: #ADD732;
+      transform: rotate(180deg);
+    }
+    33% {
+      background-color: #FBE939;
+      transform: rotate(240deg);
+    }
+    66% {
+      background-color: #F5933C;
+      transform: rotate(300deg);
+    }
+    100% {
+      background-color: #ED3F3C;
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes ticker-mover-7 {
+    0% {
+      transform-origin: bottom right;
+      transform: rotate(0deg);
+    }
+    33% {
+      transform-origin: bottom right;
+      transform: rotate(60deg);
+    }
+    66% {
+      transform-origin: bottom right;
+      transform: rotate(120deg);
+    }
+    100% {
+      transform-origin: bottom right;
+      transform: rotate(180deg);
+    }
+  }
+   
+  
