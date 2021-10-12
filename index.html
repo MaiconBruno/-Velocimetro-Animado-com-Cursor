@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -16,28 +17,70 @@
                 <div id="box-circle">
                     <div id="box-pointer">
                         <div id="dot-pointer">
-                            <div class="pointer"></div>
+                            <div id="pointer" class="pointer pointer-posicions-1"></div>
                         </div>
                     </div>
                 </div>
-                <div class="box b1">
-                    <img src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/relatorios.png" />
-                </div>
-                <div class="box b2">
-                    <img src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/logistica.png" />
-                </div>
-                <div class="box b3">
-                    <img src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/assinatura.png" />
-                </div>
-                <div class="box b4">
-                    <img src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/assinatura-2.png" />
-                </div>
-                <div class="box b5">
+                <div id="vendas" class="box b1">
+                        
                     <img src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/vendas.png" />
+                </div>
+                <div id="assinatura" class="box b2">
+                    <img  src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/assinatura-2.png" />
+                </div>
+                <div id="gestao" class="box b3">
+                    <img  src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/assinatura.png" />
+                </div>
+                <div id="logistica" class="box b4">
+                    <img  src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/logistica.png" />
+                </div>
+                <div id="relatorios" class="box b5">
+                    <img src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/relatorios.png" />
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="box-mobile-content">
+        <ul class="content-list">
+            <li id="item-1" class="item-list show-mobile">Lorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!</li>
+            <li id="item-2" class="item-list">ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!</li>
+            <li id="item-3" class="item-list">Okkkorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!</li>
+            <li id="item-4" class="item-list">DASDALorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!</li>
+            <li id="item-5" class="item-list">FRFFFLorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!</li>
+        </ul>
+    </div>
+
+    <script>
+
+        $(function () {
+            $("#vendas").mouseover(function () {
+                $("#pointer").removeClass().addClass( "pointer pointer-posicions-1" );
+                $(".show-mobile").removeClass("show-mobile");
+                $("#item-1").addClass("show-mobile") ;
+            });
+            $("#assinatura").mouseover(function () {
+                $("#pointer").removeClass().addClass( "pointer pointer-posicions-2" );
+                $(".show-mobile").removeClass().addClass( "item-list" );
+                $("#item-2").addClass( "show-mobile" );
+            });
+            $("#gestao").mouseover(function () {
+                $("#pointer").removeClass().addClass( "pointer pointer-posicions-3" );
+                $(".show-mobile").removeClass().addClass( "item-list" );
+                $("#item-3").addClass( "show-mobile" );
+            });
+            $("#logistica").mouseover(function () {
+                $("#pointer").removeClass().addClass( "pointer pointer-posicions-4" );
+                $(".show-mobile").removeClass().addClass( "item-list" );
+                $("#item-4").addClass( "show-mobile" );
+            });
+            $("#relatorios").mouseover(function () {
+                $("#pointer").removeClass().addClass( "pointer pointer-posicions-5" );
+                $(".show-mobile").removeClass().addClass( "item-list" );
+                $("#item-5").addClass( "show-mobile" );
+            });
+        });
+    </script>
 
 </body>
 

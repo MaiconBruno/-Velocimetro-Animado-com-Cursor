@@ -1,6 +1,12 @@
 body{
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #main-div{
@@ -10,7 +16,6 @@ body{
     align-items: center;
     flex-wrap: wrap;
     background-color: white;
-    min-height: 600px;
   }
   
   /* CSS for 1st Meter */  
@@ -25,8 +30,8 @@ body{
   
   #box-circle{
     position: absolute;
-    left: 20%;
-    top: 40%;
+    left: 18%;
+    top: 38%;
     width: 60%;
     height: 60%;
     border-top-left-radius: 360px;
@@ -42,7 +47,7 @@ body{
   #box-pointer{
     position: absolute;
     left: 6%;
-    top: 12%;
+    top: 10%;
     width: 88%;
     height: 88%;
     border-top-left-radius: 360px;
@@ -68,70 +73,88 @@ body{
         transform: rotate(var(--rotation));
         z-index: var(--zindex);
         border: white 1px solid;
+        cursor: pointer;
         /* border-radius: 0px 0px 0px 30px; */
     }
 
-    .b1 {--rotation:144deg; --colorBox:#416aa7; --zindex:10;}
+    /* .b1 {--rotation:144deg; --colorBox:#416aa7; --zindex:10;}
     .b2 {--rotation:108deg; --colorBox:#659cce; --zindex:9;}
     .b3 {--rotation:72deg; --colorBox:#99b63b; --zindex:8;}
     .b4 {--rotation:36deg; --colorBox:#ddaa44; --zindex:7;}
-    .b5 {--rotation:0deg; --colorBox:#b8377e; --zindex:6;}
-    
+    .b5 {--rotation:0deg; --colorBox:#b8377e; --zindex:6;} */
+
+    .b1 {--rotation:0deg; --colorBox:#b8377e; --zindex:6;}
+    .b2 {--rotation:36deg; --colorBox:#ddaa44; --zindex:7;}
+    .b3 {--rotation:72deg; --colorBox:#99b63b; --zindex:8;}
+    .b4 {--rotation:108deg; --colorBox:#659cce; --zindex:9;}
+    .b5 {--rotation:144deg; --colorBox:#416aa7; --zindex:10;}
+
 
     .box img{
         position: absolute;
         z-index: 12;
-        cursor:pointer;
     }
 
     .b5 img{
-        left:9.1%;
-        top:62.5%;
-        width: 35px;
-        transform: rotate(2deg);
+        left:8.1%;
+        top:57.5%;
+        width: 48px;
+        transform: rotate(213deg);
     }
     .b4 img{
-        left:4.1%;
-        top:62.5%;
-        width: 100px;
-        transform: rotate(-36deg);
+        left:6.5%;
+        top:63.5%;
+        width: 80px;
+        transform: rotate(248deg);
     }
     .b3 img{
         left:6.1%;
         top:68%;
-        transform: rotate(-74deg);
+        transform: rotate(284deg);
         width: 80px;
     }
     .b2 img{
-        left:6.1%;
+        left:5.5%;
         top:64%;
-        width: 75px;
-        transform: rotate(-110deg);
+        width: 90px;
+        transform: rotate(324deg);
     }
     .b1 img{
-        left:9%;
-        top:60%;
-        width: 45px;
-        transform: rotate(-144deg);
+        left:10%;
+        top:62%;
+        width: 37px;
+        transform: rotate(364deg);
     }
 
   .pointer {
+    --rotatePointer:unset;
     position: absolute;
-    top: 40%;
+    top: 25%;
     left: -150%;
     width: 200%;
     height: 7px;
     background-color: #9c9694;
-    animation-name: ticker-mover-1;
+    transform: rotate(var(--rotatePointer));
+    transform-origin: right center;
+    transition: 0.8s;
+    /* animation-name: ticker-mover-1;
     animation-duration: 20s ;
     animation-iteration-count:infinite;
-    animation-timing-function: linear;
+    animation-timing-function: linear; */
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
     z-index: 20;
   }
+  
+      
+  .pointer-posicions-1{--rotatePointer:17deg;}
+  .pointer-posicions-2{--rotatePointer:48deg;}
+  .pointer-posicions-3{--rotatePointer:88deg;}
+  .pointer-posicions-4{--rotatePointer:125deg;}
+  .pointer-posicions-5{--rotatePointer:160deg;}
+
 
   #dot-pointer{
     position: absolute;
@@ -144,8 +167,66 @@ body{
     z-index: 15;
   }
   
+
+  .box-mobile-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
   
-  @keyframes ticker-mover-1 {
+  .content-list{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+    display: none;
+  }
+  
+  .item-list{
+    list-style: none;
+    max-width: 300px;
+    position: absolute;
+    color:black;
+    top:20px;
+    font-weight: 400;
+    display: none;
+  }
+
+  .item-list::before{
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: #99b63b;
+    border-radius: 50%;
+    position: absolute;
+    top:-10px;
+    left:-34px;
+  }
+
+  .item-list::after{
+    content: '';
+    width: 2px;
+    height: 120%;
+    background-color: #99b63b;
+    border-radius: 50%;
+    position: absolute;
+    top:-10px;
+    left:-26px;
+   
+  }
+  
+  .show-mobile{
+    display: block;
+  }
+
+
+  
+  /* Animação do ponteiro */
+  /* @keyframes ticker-mover-1 {
     0% {
       transform-origin: right center;
       transform: rotate(0deg);
@@ -162,9 +243,9 @@ body{
       transform-origin:right center;
       transform: rotate(0deg);
     }
-  }
+  } */
   
-    
+    /* Items do responsivo */
     @media only screen and (min-width: 761px){
     
     } 
@@ -178,45 +259,71 @@ body{
 
 
     @media only screen and (max-width: 480px){
-        #score-meter-1{
+      .content-list{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        position: relative;
+        display: block;
+      }
+
+      #score-meter-1{
             width: 350px;
             height: 175px;
+        }
+
+        .content-list{
+          width: 75%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        #box-circle{
+          left: 17%;
+          top: 35%;
         }
 
         .box img{
             position: absolute;
             z-index: 12;
-            cursor:pointer;
+            cursor: default;
         }
     
+  
         .b5 img{
-            left:7.1%;
-            top:57%;
+            left:6.1%;
+            top:56%;
             width: 30px;
-            transform: rotate(2deg);
+            transform: rotate(210deg);
         }
         .b4 img{
-            left:0.4%;
-            top:57%;
-            width: 75px;
-            transform: rotate(-35deg);
+            left:4.5%;
+            top:62.5%;
+            width: 55px;
+            transform: rotate(246deg);
         }
         .b3 img{
-            left:1.5%;
-            top:65%;
-            transform: rotate(-76deg);
-            width: 70px;
+            left:3.1%;
+            top:67%;
+            transform: rotate(283deg);
+            width: 60px;
         }
         .b2 img{
-            left:2.1%;
-            top:58%;
-            width: 63px;
-            transform: rotate(-110deg);
+            left:3.5%;
+            top:60%;
+            width: 65px;
+            transform: rotate(324deg);
         }
         .b1 img{
-            left:5.6%;
-            top:53.5%;
-            width: 35px;
-            transform: rotate(-144deg);
+            left:8.8%;
+            top:60%;
+            width: 25px;
+            transform: rotate(364deg);
         }
     } 
