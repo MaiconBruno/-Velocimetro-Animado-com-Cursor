@@ -13,6 +13,23 @@
 <body>
     <div id="main-div">
         <div class="layout-align">
+            <div id="float-box" class="position-5">
+                <p id="paragraph-1" class="paragraph show">
+                    Nossa tecnologia é comprovadamente escalável, ou seja, conseguimos acompanhar o crescimento e o modelo de negócio da sua empresa. Seja B2B, B2C, venda manual, vendas em marketplace ou vendas recorrentes/clubes de assinaturas. Na Betalabs você concentra todas suas frentes de venda em um único local.
+                </p>
+                <p id="paragraph-2" class="paragraph">
+                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut voluptatibus eos dolorem consequatur quos. Ipsam perspiciatis aspernatur dicta molestias a, porro itaque voluptatum ut fugiat blanditiis temporibus inventore, voluptatibus dolore?
+                </p>
+                <p id="paragraph-3" class="paragraph">
+                    Chega de fazer controle manual das vendas da sua loja. Com o sistema de gestão nativo da Betalabs, você terá mais controle das vendas avulsas e recorrentes, cobranças, estoque, emissão de nota fiscal, além da possibilidade de criação de fluxos personalizados de rotinas e processos.
+                </p>
+                <p id="paragraph-4" class="paragraph">
+                    Ter diversas opções de entrega e frete disponíveis para seus clientes pode aumentar consideravelmente a taxa de vendas da sua loja online. Temos integração com diversos operadores logísticos como Frenet, Intelipost, Melhor Envio, Correios,, etc.
+                </p>
+                <p id="paragraph-5" class="paragraph">
+                    Ter uma visão completa da sua loja em tempo real é essencial, pensando nisso, nossa plataforma disponibiliza dashboards inteligentes para uma visão estratégica, além de integrações com o Google Analytics, RD Station entre outros players que podem ser integrados via nossa API. 
+                </p>
+            </div>
             <div id="score-meter-1" class="layout-align">
                 <div id="box-circle">
                     <div id="box-pointer">
@@ -21,20 +38,19 @@
                         </div>
                     </div>
                 </div>
-                <div id="vendas" class="box b1">
-                        
+                <div id="sales" class="box b1">
                     <img src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/vendas.png" />
                 </div>
-                <div id="assinatura" class="box b2">
-                    <img  src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/assinatura-2.png" />
+                <div id="signatures" class="box b2">
+                    <img src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/assinatura-2.png" />
                 </div>
-                <div id="gestao" class="box b3">
-                    <img  src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/assinatura.png" />
+                <div id="management" class="box b3">
+                    <img src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/assinatura.png" />
                 </div>
-                <div id="logistica" class="box b4">
-                    <img  src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/logistica.png" />
+                <div id="logistics" class="box b4">
+                    <img src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/logistica.png" />
                 </div>
-                <div id="relatorios" class="box b5">
+                <div id="reports" class="box b5">
                     <img src="http://132.226.247.49/betalabs/wp-content/uploads/2021/10/relatorios.png" />
                 </div>
             </div>
@@ -43,41 +59,66 @@
 
     <div class="box-mobile-content">
         <ul class="content-list">
-            <li id="item-1" class="item-list show-mobile">Lorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!</li>
-            <li id="item-2" class="item-list">ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!</li>
-            <li id="item-3" class="item-list">Okkkorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!</li>
-            <li id="item-4" class="item-list">DASDALorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!</li>
-            <li id="item-5" class="item-list">FRFFFLorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!Lorem ipsum dolor sit amet, consectetur adipisicing elit!</li>
+            <li id="item-1" class="item-list show-mobile">
+                Nossa tecnologia é comprovadamente escalável, ou seja, conseguimos acompanhar o crescimento e o modelo de negócio da sua empresa. Seja B2B, B2C, venda manual, vendas em marketplace ou vendas recorrentes/clubes de assinaturas. Na Betalabs você concentra todas suas frentes de venda em um único local.
+            </li>
+            <li id="item-2" class="item-list">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, laborum! Eveniet molestias, placeat laborum architecto nihil doloribus, modi non a dicta exercitationem sequi mollitia explicabo neque numquam, laudantium quia quasi.
+            </li>
+            <li id="item-3" class="item-list">
+                Chega de fazer controle manual das vendas da sua loja. Com o sistema de gestão nativo da Betalabs, você terá mais controle das vendas avulsas e recorrentes, cobranças, estoque, emissão de nota fiscal, além da possibilidade de criação de fluxos personalizados de rotinas e processos
+            </li>
+            <li id="item-4" class="item-list">
+                Ter diversas opções de entrega e frete disponíveis para seus clientes pode aumentar consideravelmente a taxa de vendas da sua loja online. Temos integração com diversos operadores logísticos como Frenet, Intelipost, Melhor Envio, Correios,, etc.
+            </li>
+            <li id="item-5" class="item-list">
+                Ter uma visão completa da sua loja em tempo real é essencial, pensando nisso, nossa plataforma disponibiliza dashboards inteligentes para uma visão estratégica, além de integrações com o Google Analytics, RD Station entre outros players que podem ser integrados via nossa API. 
+            </li>
         </ul>
     </div>
 
     <script>
 
-        $(function () {
-            $("#vendas").mouseover(function () {
-                $("#pointer").removeClass().addClass( "pointer pointer-posicions-1" );
-                $(".show-mobile").removeClass("show-mobile");
-                $("#item-1").addClass("show-mobile") ;
+        jQuery(function () {
+            jQuery("#sales").mouseover(function () {
+                jQuery("#pointer").removeClass().addClass("pointer pointer-posicions-1");
+                jQuery(".show").removeClass("show");
+                jQuery("#paragraph-1").addClass("show");
+                jQuery("#float-box").removeClass().addClass("position-1");
+                jQuery(".show-mobile").removeClass("show-mobile");
+                jQuery("#item-1").addClass("show-mobile");
             });
-            $("#assinatura").mouseover(function () {
-                $("#pointer").removeClass().addClass( "pointer pointer-posicions-2" );
-                $(".show-mobile").removeClass().addClass( "item-list" );
-                $("#item-2").addClass( "show-mobile" );
+            jQuery("#signatures").mouseover(function () {
+                jQuery("#pointer").removeClass().addClass("pointer pointer-posicions-2");
+                jQuery(".show-mobile").removeClass("show-mobile");
+                jQuery("#float-box").removeClass().addClass("position-2");
+                jQuery(".show").removeClass("show");
+                jQuery("#paragraph-2").addClass("show");
+                jQuery("#item-2").addClass("show-mobile");
             });
-            $("#gestao").mouseover(function () {
-                $("#pointer").removeClass().addClass( "pointer pointer-posicions-3" );
-                $(".show-mobile").removeClass().addClass( "item-list" );
-                $("#item-3").addClass( "show-mobile" );
+            jQuery("#management").mouseover(function () {
+                jQuery("#pointer").removeClass().addClass("pointer pointer-posicions-3");
+                jQuery(".show-mobile").removeClass("show-mobile");
+                jQuery("#float-box").removeClass().addClass("position-3");
+                jQuery(".show").removeClass("show");
+                jQuery("#paragraph-3").addClass("show");
+                jQuery("#item-3").addClass("show-mobile");
             });
-            $("#logistica").mouseover(function () {
-                $("#pointer").removeClass().addClass( "pointer pointer-posicions-4" );
-                $(".show-mobile").removeClass().addClass( "item-list" );
-                $("#item-4").addClass( "show-mobile" );
+            jQuery("#logistics").mouseover(function () {
+                jQuery("#pointer").removeClass().addClass("pointer pointer-posicions-4");
+                jQuery(".show-mobile").removeClass("show-mobile");
+                jQuery("#float-box").removeClass().addClass("position-4");
+                jQuery(".show").removeClass("show");
+                jQuery("#paragraph-4").addClass("show");
+                jQuery("#item-4").addClass("show-mobile");
             });
-            $("#relatorios").mouseover(function () {
-                $("#pointer").removeClass().addClass( "pointer pointer-posicions-5" );
-                $(".show-mobile").removeClass().addClass( "item-list" );
-                $("#item-5").addClass( "show-mobile" );
+            jQuery("#reports").mouseover(function () {
+                jQuery("#pointer").removeClass().addClass("pointer pointer-posicions-5");
+                jQuery(".show-mobile").removeClass("show-mobile");
+                jQuery("#float-box").removeClass().addClass("position-5");
+                jQuery(".show").removeClass("show");
+                jQuery("#paragraph-5").addClass("show");
+                jQuery("#item-5").addClass("show-mobile");
             });
         });
     </script>
